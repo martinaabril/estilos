@@ -1,0 +1,137 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+}
+
+*{
+    color: white;
+}
+
+:root {
+  --bg: #0f0f11;
+  --panel: #1c1c20;
+  --primary: #e95b5b;
+  --text: #e6e6e6;
+  --muted: #aaaaaa;
+  --radius: 14px;
+  --space: 1.2rem;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #141416;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+nav a {
+  color: var(--text);
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 4rem;
+}
+nav a:hover { opacity: 1; }
+
+main {
+  padding: 140px 2rem 3rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.presentacion {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.presentacion img {
+  width: 360px;
+  border-radius: var(--radius);
+  border: 2px solid #333;
+  height: 100px;
+}
+
+.badges {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  border: 1px solid var(--primary);
+  padding: .3rem .8rem;
+  border-radius: 20px;
+  font-size: .9rem;
+}
+
+
+.arsenal {
+  margin: 4rem 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--panel);
+  padding: 1rem;
+  width: 220px;
+  border-radius: var(--radius);
+  border: 1px solid #333;
+}
+
+.card img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.card h3 {
+  margin: .5rem 0;
+}
+
+
+blockquote {
+  font-size: 2rem;
+  color: var(--primary);
+  font-style: italic;
+  margin: 2rem 0;
+}
+
+.texto p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+}
+
+@media(max-width: 800px){
+  .presentacion { flex-direction: column; text-align: center; }
+  .presentacion img { width: 100%; max-width: 380px; }
+  .cards { justify-content: center; }
+}
